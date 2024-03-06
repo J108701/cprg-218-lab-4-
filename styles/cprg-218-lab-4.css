@@ -1,0 +1,102 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 400px; /* Adjust based on your preference */
+  background-image: url('../assets/Feta cheese copy.jpeg'); /* Adjust the path as necessary */
+  background-size: cover; /* Cover the entire section */
+  background-position: center; /* Center the background image */
+}
+  
+  .hero-container img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5em; /* Responsive font size */
+  }
+  
+  .hero-text p {
+    font-size: 1.2em;
+  }
+  .content-container {
+    padding: 20px;
+  }
+  
+  .explore-button {
+    background-color: blue; /* Change as needed */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .cheese-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .cheese-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* Optional */
+  }
+  .accordion-container {
+    margin-top: 20px;
+  }
+  
+  .accordion-item {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+    transition: background-color 0.6s ease;
+  }
+  
+  .accordion-content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: white;
+  }
+  .footer-container {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  .footer-links {
+    list-style-type: none;
+  }
+  
+  .footer-links li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  .footer-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .social-icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+        
