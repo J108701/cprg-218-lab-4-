@@ -22,10 +22,10 @@ body, html {
   color: rgb(255, 255, 255);
 }
 
-/* Style the accordion buttons */
-.accordion-button {
-  background-color: #ffd950;
-  color: #270303;
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -36,30 +36,64 @@ body, html {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion-button:hover {
-  background-color: #fbfaf7;
+.active, .accordion:hover {
+  background-color: #ccc;
 }
 
-/* Style the accordion content */
-.accordion-content {
+/* Style the accordion panel. Note: hidden by default */
+.panel {
   padding: 0 18px;
-  background-color: rgb(115, 240, 197);
+  background-color: white;
   display: none;
   overflow: hidden;
+}  
+/* 添加新的样式来布局内容 */
+.cheese-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
 }
-  
-  .cheese-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .cheese-gallery img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px; /* Optional */
-  }
+
+.cheese-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cheese-description {
+  flex: 1;
+  padding: 20px;
+}
+
+.cheese-description p {
+  margin: 0 0 10px; /* 调整文字与按钮之间的间距 */
+}
+
+.cheese-image {
+  max-width: 300px; /* 放大图片 */
+  height: auto;
+  border-radius: 0 10px 10px 0;
+}
+
+.explore-button {
+  background-color: #ffd950; /* 默认按钮背景色 */
+  color: #270303; /* 默认按钮文字颜色 */
+  cursor: pointer;
+  padding: 12px 24px; /* 调整按钮内边距 */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px; /* 调整按钮文字大小 */
+  transition: background-color 0.4s ease-out; /* 添加过渡效果 */
+}
+
+/* 当按钮被点击或悬停时改变背景颜色 */
+.explore-button:hover {
+  background-color: #fbfaf7; /* 悬停时的背景色 */
+}
   .accordion-container {
     margin-top: 20px;
   }
@@ -78,15 +112,14 @@ body, html {
   }
   
   .accordion-content {
-    padding: 0 18px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
-    background-color: white;
-  }
+    transition: max-height 0.4s ease-out; /* 添加过渡效果 */
+}
+
   .footer-container {
     background-color: #222;
-    color: white;
+    color: rgb(54, 8, 8);
     text-align: center;
     padding: 20px;
     position: relative;
