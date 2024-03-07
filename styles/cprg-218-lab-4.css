@@ -173,3 +173,13 @@ footer {
     height: 200px; /* 较小屏幕上的较小地图 */
   }
 }
+.footer-icons {
+  display: flex;
+  justify-content: center; /* 或者其他您喜欢的对齐方式 */
+  gap: 20px; /* 调整图标之间的间隔 */
+}
+
+.footer-icons .material-icons {
+  font-size: 24px; /* 调整图标大小 */
+  color: #A87A56; /* 调整图标颜色，您可以改为任何您喜欢的颜色 */
+}
