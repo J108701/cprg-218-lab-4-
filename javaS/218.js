@@ -25,3 +25,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
   
+var currentYear = new Date().getFullYear();
+document.getElementById("copyright").innerHTML = "&copy; " + currentYear + " Cheese Delights. All rights reserved.";
