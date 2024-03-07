@@ -15,7 +15,7 @@ body, html {
 /* The hero image */
 .hero-image {
 /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Roquefort copy.jpeg");
+background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/Roquefort copy.jpeg");
 
 /* Set a specific height */
 height: 50%;
@@ -111,24 +111,65 @@ button:hover {
   overflow: hidden;
 }
 
-/* Footer */
+/* Footer CSS */
 footer {
-  background-color: #f6d87c;
-  color: #A87A56;
+  background-color: #f6d87c; /* 保持原有颜色 */
+  color: #A87A56; /* 文字颜色 */
   padding: 20px;
   text-align: center;
-  width: 100%;
-  height: 700px;
-  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around; /* 在元素之间保持均匀间距 */
+  align-items: center; /* 使内容垂直居中 */
+  margin: 0 auto; /* 水平居中 */
+}
+
+.footer-text {
+  text-align: left; /* 文本左对齐 */
+  flex: 1; /* 占用可用空间 */
+  padding: 0 20px; /* 添加一些内边距 */
+}
+
+.google-map {
+  flex: 1; /* 占用可用空间 */
+  padding: 0 20px; /* 添加一些内边距 */
+  order: 2; /* 确保地图总是在右边 */
+}
+
+.google-map iframe {
+  width: 50%; /* 使用其容器的全部宽度 */
+  height: 150px; /* 设置固定高度 */
+}
+
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
 }
 
 .footer-links li a {
   color: #A87A56;
+  text-decoration: none;
 }
 
-/* Google Map */
-.google-map {
-  width: 100%;
-  height: 300px;
+#copyright {
   margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+/* 响应式调整 */
+@media (max-width: 800px) {
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-text, .google-map {
+    width: 100%;
+    padding: 20px 0; /* 调整为上下内边距，移除左右内边距 */
+  }
+  .google-map iframe {
+    height: 200px; /* 较小屏幕上的较小地图 */
+  }
 }
